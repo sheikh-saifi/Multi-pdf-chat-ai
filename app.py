@@ -44,7 +44,7 @@ def get_text_chunks(raw_text):
 
 def get_vectorstore(text_chunks):
     embeddings = LocalEmbeddings()
-    vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings) # this create database in out local. requires two parameter.
+    vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings) # this create database in our local. requires two parameter.
     return vectorstore
 
 def get_conversation_chain(vectorstore):
